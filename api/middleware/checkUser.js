@@ -1,9 +1,9 @@
-const { findByUserName } = require('../auth/auth-model')
+const { findByUserName } = require('../users/users-model')
 
 const checkCred = (req, res, next) => {
   let credentials = req.body
-  if (!credentials.username || !credentials.password) {
-    res.status(400).json({message: 'username and password required'})
+  if (!credentials.username || !credentials.password || !credentials.email) {
+    res.status(400).json({message: 'username, email and password required'})
   }
   findByUserName(req.body.username)
   .then((user) => {
@@ -32,6 +32,7 @@ const checkUserExists = (req, res, next) => {
     })
     .catch(next)
 }
+
 module.exports = {
   checkCred,
   checkUserExists
