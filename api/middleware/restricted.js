@@ -21,6 +21,5 @@ module.exports = (req, res, next) => {
       message: `token required`
     })
 
-  }
-    
+  }   
 }

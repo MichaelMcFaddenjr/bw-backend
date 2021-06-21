@@ -91,7 +91,6 @@ router.delete('/:user_id', restricted, checkId, (req, res, next) => {
 
 router.use((err, req, res, next) => { // eslint-disable-line
     res.status(err.status || 500).json({
-        contact_connie: `She's got the bug spray`,
         message: err.message,
         stack: err.stack,
     })
