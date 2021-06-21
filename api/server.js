@@ -2,12 +2,17 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 
-const { restricted } = require
+// const { restricted } = require('./middleware/restricted')
+
+const authRouter = require('./auth/auth-router')
 
 const server = express()
+
 server.use(express.json())
 server.use(helmet())
 server.use(cors())
+
+server.use('/api/auth', authRouter);
 
 server.use((err, req, res, next) => { //eslint-disable-line
   res.status(err.status || 500).json({
@@ -15,5 +20,6 @@ server.use((err, req, res, next) => { //eslint-disable-line
     stack: err.stack
   })
 })
+
 
 module.exports = server
