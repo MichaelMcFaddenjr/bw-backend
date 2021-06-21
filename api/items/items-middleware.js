@@ -2,7 +2,7 @@ const Items = require('./items-model')
 
 const checkId = (req, res, next) => {
   const id = req.params.item_id
-  Items.findBy(id)
+  Items.findById(id)
   .then(item => {
     if(!item) {
       res.status(404).json({
