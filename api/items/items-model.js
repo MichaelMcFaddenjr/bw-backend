@@ -18,7 +18,7 @@ function findBy(filter) {
 }
 
 function findById(item_id) {
-  return db('item as i')
+  return db('items as i')
   .leftJoin('user_items as ui', 'i.item_id', 'ui.item_id')
   .leftJoin('users as u', 'ui.user_id', 'u.user_id')
   .select(
