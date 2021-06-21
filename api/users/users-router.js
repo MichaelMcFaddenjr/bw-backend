@@ -29,9 +29,9 @@ router.get('/:user_id', restricted, checkId, (req, res, next) => {
     .catch(next)
 })
 
-router.get('/:user_id/plants', restricted, checkId, (req, res, next) => {
+router.get('/:user_id/items', restricted, checkId, (req, res, next) => {
     const {user_id} = req.params
-    Users.findPlantsById(user_id)
+    Users.findItemsById(user_id)
     .then(user => {
         res.json(user)
     })
@@ -55,7 +55,6 @@ verifyUniqueEmail,
 
 router.post('/login', confirmLoginFields, verifyLogin, (req, res, next) => {
     const {username} = req.body
-
     Users.findBy({username})
     .then(([user]) => {
         const token = tokenBuilder(user)
@@ -84,7 +83,7 @@ router.delete('/:user_id', restricted, checkId, (req, res, next) => {
     Users.remove(req.params.user_id)
     .then(() => {
         res.status(200).json({
-            message: `Sorry you hate plants.`
+            message: `See ya never.`
         })
     })
     .catch(next)
