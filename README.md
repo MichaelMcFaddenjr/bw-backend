@@ -123,13 +123,13 @@ Data for a specified item including the owner
 #### [POST] /api/items/user/:user_id
 RESTRICTED
 Create an item using a users id
-REQUIRED INFO
+***REQUIRED INFO***
 >item_name 'string'
 >item_price 'string' ex. '$25 per day'
 >item_category 'string' make a drop down for this so we dont have to worry about spelling issues
 >item_location 'string'
 
-OPTIONAL INFO
+***OPTIONAL INFO***
 >item_description 'string'
 >item_image 'string'
 
@@ -151,13 +151,13 @@ OPTIONAL INFO
 #### [PUT] /api/items/:user_id/:item_id
 RESTRICTED
 Edit item information using the item_id
-REQUIRED INFO
+***REQUIRED INFO***
 >item_name 'string'
 >item_price 'string' ex. '$25 per day'
 >item_category 'string' make a drop down for this so we dont have to worry about spelling issues
 >item_location 'string'
 
-OPTIONAL INFO
+***OPTIONAL INFO***
 >item_description 'string'
 >item_image 'string'
 
@@ -262,7 +262,7 @@ See all items created by a single user
 ##### [POST] /api/users/register
 Create a new user
 
-Required information
+***Required information***
 > username
 > email
 > password
@@ -282,7 +282,7 @@ Required information
 ##### [POST] /api/users/login
 Logs in a user, receives a token for authorization
 
-Required information
+***Required information***
 > username
 > password
 
@@ -303,7 +303,7 @@ Required information
 Edit the user's email and password only
 Need to send back username, email, and password
 
-Required information
+***Required information***
 > username
 > email
 > password
