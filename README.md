@@ -2,34 +2,34 @@
 
 ## https://ft-backend-use-my-tech.herokuapp.com/
 
-Here are all the endpoints. I don't know if you will beed all of them but better to have them. 
+Here are all the endpoints. I don't know if you will need all of them but better to have them. 
 
 ### [GET]/api/items
-RESTRICTED
+***RESTRICTED***
 Returns data for all items
 
 ### [GET]/api/items/:item_id
-RESTRICTED
+***RESTRICTED***
 Data for a specified item including the owner
 
 ### [GET]/api/users/:user_id/items
-RESTRICTED
+***RESTRICTED***
 Returns data for all items created by a specified user
 
 ### [GET]/api/users/:user_id
-RESTRICTED
+***RESTRICTED***
 See a specific users information
 
 ### [POST]/api/items/user/:user_id
-RESTRICTED
+***RESTRICTED***
 Create an item using a users id
 
 ### [PUT]/api/items/:user_id/:item_id
-RESTRICTED
+***RESTRICTED***
 Edit item information using the item_id
 
 ### [DELETE]/api/items/:user_id/:item_id
-RESTRICTED
+***RESTRICTED***
 Delete an item with user and item id
 
 ### [POST]/api/users/register
@@ -39,12 +39,12 @@ create a new user
 User login- token received at login
 
 ### [PUT]/api/users/:user_id
-RESTRICTED
+***RESTRICTED***
 Edit a users email and password
 
 ## Items
 #### [GET]/api/items
-RESTRICTED
+***RESTRICTED***
 See full array of items
 
 <details>
@@ -100,7 +100,7 @@ See full array of items
 </details>
 
 #### [GET] /api/items/user/:user_id
-RESTRICTED
+***RESTRICTED***
 Data for a specified item including the owner
 
 <details>
@@ -121,17 +121,17 @@ Data for a specified item including the owner
 </details>
 
 #### [POST] /api/items/user/:user_id
-RESTRICTED
+***RESTRICTED***
 Create an item using a users id
  ***REQUIRED INFO***
- item_name 'string'
- item_price 'string' ex. '$25 per day'
- item_category 'string' make a drop down for this so we dont have to worry about spelling issues
- item_location 'string'
+* item_name 'string'
+* item_price 'string' ex. '$25 per day'
+* item_category 'string' make a drop down for this so we dont have to worry about spelling issues
+* item_location 'string'
 
  ***OPTIONAL INFO***
- item_description 'string'
- item_image 'string'
+* item_description 'string'
+* item_image 'string'
 
 <details>
 
@@ -149,17 +149,17 @@ Create an item using a users id
 </details>
 
 #### [PUT] /api/items/:user_id/:item_id
-RESTRICTED
+***RESTRICTED***
 Edit item information using the item_id
  ***REQUIRED INFO***
- item_name 'string'
- item_price 'string' ex. '$25 per day'
- item_category 'string' make a drop down for this so we dont have to worry about spelling issues
- item_location 'string'
+• item_name 'string'
+• item_price 'string' ex. '$25 per day'
+• item_category 'string' make a drop down for this so we dont have to worry about spelling issues
+• item_location 'string'
 
  ***OPTIONAL INFO***
- item_description 'string'
- item_image 'string'
+• item_description 'string'
+• item_image 'string'
 
 <details>
 
@@ -176,7 +176,7 @@ Edit item information using the item_id
 </details>
 
 #### [DELETE] /api/items/:user_id/:item_id
-RESTRICTED
+***RESTRICTED***
 Remove an item using the user and item id
 
 <details>
@@ -190,7 +190,7 @@ Remove an item using the user and item id
 
 ## Users
 #### [GET] /api/users
-RESTRICTED
+***RESTRICTED***
 see the full array of users
 
 <details>
@@ -222,7 +222,7 @@ see the full array of users
 </details>
 
 #### [GET] /api/users/:user_id
-RESTRICTED ENDPOINT
+***RESTRICTED*** ENDPOINT
 
 See a specific user's information
 <details>
@@ -238,7 +238,7 @@ See a specific user's information
 </details>
 
 #### [GET] /api/users/:user_id/items
-RESTRICTED ENDPOINT
+***RESTRICTED*** ENDPOINT
 
 See all items created by a single user
 <details>
@@ -263,9 +263,9 @@ See all items created by a single user
 Create a new user
 
 ***Required information***
- username
- email
- password
+* username
+* email
+* password
 
 <details>
 
@@ -283,8 +283,8 @@ Create a new user
 Logs in a user, receives a token for authorization
 
  ***Required information***
- username
- password
+* username
+* password
 
 <details>
 
@@ -298,15 +298,15 @@ Logs in a user, receives a token for authorization
 </details>
 
 #### [PUT] /api/users/:user_id
-***RESTRICTED ENDPOINT***
+***RESTRICTED***
 
 Edit the user's email and password only
 Need to send back username, email, and password
 
  ***Required information***
- username
- email
- password
+* username
+* email
+* password
 
 <details>
 
@@ -321,7 +321,7 @@ Need to send back username, email, and password
 </details>
 
 #### [DELETE] /api/users/:user_id
-***RESTRICTED ENDPOINT***
+***RESTRICTED ***
 
 Delete a user
 <details>
