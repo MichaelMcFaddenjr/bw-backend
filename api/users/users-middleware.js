@@ -56,10 +56,11 @@ const verifyLogin = (req, res, next) => {
     .then(([user]) => {
         const token = bcrypt.hashSync(password, 8)
         if (user && bcrypt.compareSync(password, user.password)) {
+            token
             next()
         } else {
             res.status(401).json({
-                message: `invalid credentials`, token
+                message: `invalid credentials`
             })
         }
     })
